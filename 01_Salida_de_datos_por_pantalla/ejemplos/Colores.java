@@ -1,11 +1,10 @@
-import colors.ConsoleColors;
-
 /**
  * Muestra varias palabras en el color que corresponde
  * 
  * @author Sergio Sánchez
  */
 
+import colors.ConsoleColors;
 public class Colores {
   public static void main(String[] args) {
     System.out.print("\033[33m mandarina");
@@ -18,6 +17,6 @@ public class Colores {
     System.out.print("\033[34m mar");
 
     //Reseteamos
-    System.out.println(ConsoleColors.RESET);
+    // System.out.println("\033[0m");
   }
 }

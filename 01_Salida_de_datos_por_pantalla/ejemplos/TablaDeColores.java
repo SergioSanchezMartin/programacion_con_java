@@ -1,12 +1,10 @@
-import colors.ConsoleColors;
-
 /**
- * Tabla con los colores disponibles
- *
- * Muestra varias palabras en el color que corresponde.
- *
+ * Muestra varias palabras en el color que corresponde
+ * 
  * @author Sergio Sánchez
  */
+
+import colors.ConsoleColors;
 public class TablaDeColores {
   public static void main(String[] args) {
     System.out.println("┌────────┬───────────┬────────┬────────────────┐");

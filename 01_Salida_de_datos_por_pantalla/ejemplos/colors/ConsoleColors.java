@@ -1,5 +1,10 @@
-package colors;
+/**
+ * Muestra varias palabras en el color que corresponde
+ * 
+ * @author Sergio Sánchez
+ */
 
+package colors;
 public class ConsoleColors {
   // Reset
   public static final String RESET = "\033[0m";  // Text Reset
