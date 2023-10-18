@@ -2,7 +2,7 @@
 
 Repositorio que contendrá los ejemplos y ejercicios que abordemos en el módulo de **Programación de 1º DAW**.
 
-Estos ejemplos y soluciones se extraen del libro **"Aprende Java con Ejercicios"**.
+Estos ejemplos y soluciones se extraen del libro **"Aprende Java con Ejercicios"**, del profesor Luis J. Sánchez.
 
 <a href="https://leanpub.com/aprendejava">![Aprende Java con Ejercicios](title_page.png)</a>
 
