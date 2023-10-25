@@ -16,7 +16,7 @@ public class T02Ejercicio01 {
     System.out.println("El valor de y: " + y);
     System.out.println("x + y = " + (x + y));
     System.out.println("x - y = " + (x - y));
-    System.out.println("x / y = " + ((float) x / (float) y));   //Hacemos casting para que no nos salga resultado 0.
+    System.out.println("x / y = " + ((double) x / (double) y));   //Hacemos casting para que no nos salga resultado 0.
     System.out.println("x * y = " + (x * y));
   }
 }
