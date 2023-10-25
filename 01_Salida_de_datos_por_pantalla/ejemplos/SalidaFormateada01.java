@@ -9,5 +9,8 @@ public class SalidaFormateada01 {
     System.out.printf("El número %f sale con decimales.\n",  21.0);
     System.out.printf("El %.3f sale exactamente con %d decimales.\n", 21.0, 3);
     System.out.printf("Letra: %c\n", 83);
+
+    //Para ver el ORDEN
+    System.out.printf("Mostramos el segundo: %2$d; y después el primero: %1$f.\n", 23.0, 56);
   }
 }

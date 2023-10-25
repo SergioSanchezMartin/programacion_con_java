@@ -1,6 +1,6 @@
 /**
  * Clase en la que probamos todos los tipos de variables vistos en clase,
- * así como
+ * así como la operación de casting y el uso de operadores.
  * 
  * @author Sergio Sánchez
  */
