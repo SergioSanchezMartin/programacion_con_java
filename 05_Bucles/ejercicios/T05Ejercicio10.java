@@ -9,7 +9,7 @@
  * @author Sergio Sánchez
  */
 
-public class T04Ejercicio10 {
+public class T05Ejercicio10 {
   public static void main(String[] args) {
     double numeroIntroducido = 0;
     int cantidadPositivos = 0;

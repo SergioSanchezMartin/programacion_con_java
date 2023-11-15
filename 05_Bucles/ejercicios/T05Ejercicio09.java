@@ -23,7 +23,7 @@ public class T05Ejercicio09 {
     n = numeroIntroducido;
     sc.close();
 
-    while (n > 10) {
+    while (n >= 10) {
       //Si entra aquí, obligatoriamente el número es mayor de 1 cifra.
       numeroCifras++;
       n = n / 10;     //Se puede poner como n /= 10

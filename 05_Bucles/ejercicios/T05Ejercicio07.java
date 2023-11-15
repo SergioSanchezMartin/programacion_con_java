@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class T05Ejercicio07 {
   public static void main(String[] args) {
-    int intentos = 3;
+    int intentos = 4;
     int numeroIntroducido;
     int combinacionCorrecta = 1234;
     boolean acertado = false;
