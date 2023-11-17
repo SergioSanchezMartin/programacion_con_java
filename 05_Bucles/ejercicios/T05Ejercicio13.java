@@ -18,9 +18,7 @@ public class T05Ejercicio13 {
       if (numeroIntroducido > 0) {
         positivos++;
       } else if (numeroIntroducido < 0) {
-        negativos--;
-      } else {
-        continue;
+        negativos++;
       }
     }
     sc.close();

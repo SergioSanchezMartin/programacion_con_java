@@ -16,7 +16,7 @@ public class T05Ejercicio11 {
     System.out.print("Introduce un número: ");
     numeroIntroducido = sc.nextInt();
     sc.close();
-    System.out.println("   n   |    n²    |    n³     ");
+    System.out.printf("%5s  |%8s  |%9s  \n", "n", "n²", "n³");
     System.out.println("----------------------------");
 
     for (int i = numeroIntroducido; i < numeroIntroducido + 5; i++) {
