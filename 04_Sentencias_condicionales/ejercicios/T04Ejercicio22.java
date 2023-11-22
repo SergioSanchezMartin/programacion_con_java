@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class T04Ejercicio22 {
   public static void main(String[] args) {
-    Scanner sc = new Scanner (System.in);
+    Scanner sc = new Scanner (System.in, "Windows-1252");     //Codificación Windows-1252 para que admita acentos
     final int MINUTOSTOTALES = (4 * 24 * 60) + (15 * 60);     //Calculamos minutos desde Lunes 00:00 hasta Viernes 15:00
     int diasTranscurridos = 0;
 
@@ -39,6 +39,7 @@ public class T04Ejercicio22 {
     int horas = sc.nextInt();
     System.out.print("Por favor, introduce los minutos: ");
     int minutos = sc.nextInt();
+    sc.close();
 
     int minutosTranscurridos = (diasTranscurridos * 24 * 60) + (horas * 60) + minutos;
     System.out.println("Faltan " + (MINUTOSTOTALES - minutosTranscurridos) + " minutos para llegar al fin de semana");

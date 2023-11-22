@@ -15,11 +15,14 @@ public class T04Ejercicio19 {
     int digitos = 0;
     
     System.out.print("Por favor, introduzca un número entero (5 cifras como máximo): ");
+    // String respuesta = System.console().readLine();
+    // int n = Integer.parseInt(respuesta);
+    // n = Math.abs(n);
     n = Math.abs(Integer.parseInt(System.console().readLine()));
     
     if ( n < 10 ) {
       digitos = 1;
-    } else if (( n >= 10 ) && ( n < 100 )){
+    } else if (( n >= 10 )){
       digitos = 2;
     } else if (( n >= 100 ) && ( n < 1000 )){
       digitos = 3;
