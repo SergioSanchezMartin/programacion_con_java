@@ -1,13 +1,13 @@
-import java.util.Scanner;
-
 /**
- * Tema 3. Lectura de datos desde teclado
+ * Tema 3 - Lectura de datos desde teclado
  *
  * 7. Escribe un programa que calcule el total de una factura a partir
  * de la base imponible.
  *
  * @author Sergio Sánchez
  */
+import java.util.Scanner;
+
 public class T03Ejercicio07 {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
