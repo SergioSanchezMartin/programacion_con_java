@@ -9,7 +9,7 @@
 public class T05Ejercicio37 {
   public static void main (String[] args) {
     int numeroIntroducido;
-    do {
+    do {  
       System.out.print("Introduce un número entero positivo: ");
       numeroIntroducido = Integer.parseInt(System.console().readLine());
     } while (numeroIntroducido < 1);
