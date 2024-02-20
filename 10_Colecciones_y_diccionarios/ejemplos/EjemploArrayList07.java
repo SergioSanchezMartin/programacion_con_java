@@ -1,32 +1,25 @@
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
- * Ordenación ascendente de elementos Integer:
- * método sort().
+ * ArrayList de objetos:
+ * creación y adición a la lista de objetos de la clase Gato.
  * 
  * @author Sergio Sánchez
  */
 public class EjemploArrayList07 {
   public static void main(String[] args) {
 
-    ArrayList<Integer> a = new ArrayList<Integer>();
+    ArrayList<Gato> g = new ArrayList<Gato>();
 
-    a.add(67);
-    a.add(78);
-    a.add(10);
-    a.add(4);
+    g.add(new Gato("Garfield", "naranja", "mestizo"));
+    g.add(new Gato("Pepe", "gris", "angora"));
+    g.add(new Gato("Mauri", "blanco", "manx"));
+    g.add(new Gato("Ulises", "marrón", "persa"));
 
-    System.out.println("\nNúmeros en el orden original:");
-    for (int numero: a) {
-      System.out.println(numero);
-    }
+    System.out.println("Datos de los gatos:");
 
-    Collections.sort(a);
-
-    System.out.println("\nNúmeros ordenados:");
-    for (int numero: a) {
-      System.out.println(numero);
+    for (Gato gatoAux: g) {
+      System.out.println(gatoAux);
     }
   }
 }
