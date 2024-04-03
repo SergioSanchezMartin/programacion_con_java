@@ -3,8 +3,8 @@ import java.util.Collections;
 
 public class MainCarta {
   public static void main(String[] args) {
-    final int TOTAL_CARTAS = 5;
-    ArrayList<Carta> mano = new ArrayList<>();
+    final int TOTAL_CARTAS = 10;
+    ArrayList<Carta> mano = new ArrayList<Carta>();
     
     //Añadimos la primera carta
     Carta c = new Carta();
@@ -24,6 +24,7 @@ public class MainCarta {
 
     Collections.sort(mano);
 
+    System.out.println("\nCARTAS ORDENADAS: ");
     for (Carta carta : mano) {
       System.out.println(carta);
     }
