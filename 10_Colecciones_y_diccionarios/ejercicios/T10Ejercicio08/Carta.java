@@ -14,8 +14,8 @@ public class Carta {
   private String valor;
 
   public Carta(){
-    this.palo = p[(int)(Math.random()*2)];
-    this.valor = n[(int)(Math.random()*4)];
+    this.palo = p[(int)(Math.random()*4)];
+    this.valor = n[(int)(Math.random()*10)];
   }
 
   public String getPalo() {
