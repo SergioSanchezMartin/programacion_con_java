@@ -1,0 +1,5 @@
+0:0:0:0:0:0:0:1 - - [03/May/2024:18:23:28 +0200] "GET /frutas HTTP/1.1" 302 - http-bio-8080-exec-2 0
+0:0:0:0:0:0:0:1 - - [03/May/2024:18:23:28 +0200] "GET /frutas/ HTTP/1.1" 200 660 http-bio-8080-exec-3 606
+0:0:0:0:0:0:0:1 - - [03/May/2024:18:23:29 +0200] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [03/May/2024:18:23:30 +0200] "GET /frutas/index.jsp?fruta=kiwi HTTP/1.1" 200 282 http-bio-8080-exec-5 9
+0:0:0:0:0:0:0:1 - - [03/May/2024:18:23:30 +0200] "GET /frutas/assets/img/kiwi.jpg HTTP/1.1" 200 260061 http-bio-8080-exec-6 132
