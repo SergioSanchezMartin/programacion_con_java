@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Attach)",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 5005,
+            "preLaunchTask": "run-tomcat",
+            "postDebugTask": "stop-tomcat"
+        },
+        {
+            "type" : "chrome",
+            "name" : "Launch Chrome",
+            "request": "launch",
+            "url" : "http://localhost:8080/holamundo",
+            "webRoot" : "${workspaceFolder}",
+            "runtimeArgs": ["--disable-cache"]
+        }
+    ]
+}
