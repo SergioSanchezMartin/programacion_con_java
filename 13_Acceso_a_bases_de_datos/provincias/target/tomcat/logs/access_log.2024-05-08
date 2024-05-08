@@ -1,0 +1,9 @@
+0:0:0:0:0:0:0:1 - - [08/May/2024:20:40:17 +0200] "GET /provincias HTTP/1.1" 302 - http-bio-8080-exec-2 0
+0:0:0:0:0:0:0:1 - - [08/May/2024:20:40:23 +0200] "GET /provincias/ HTTP/1.1" 200 1060 http-bio-8080-exec-3 5253
+0:0:0:0:0:0:0:1 - - [08/May/2024:20:40:24 +0200] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [08/May/2024:20:40:32 +0200] "POST /provincias/provincias.jsp HTTP/1.1" 200 1068 http-bio-8080-exec-6 695
+0:0:0:0:0:0:0:1 - - [08/May/2024:21:00:14 +0200] "GET /provincias HTTP/1.1" 302 - http-bio-8080-exec-9 0
+0:0:0:0:0:0:0:1 - - [08/May/2024:21:00:14 +0200] "GET /provincias/ HTTP/1.1" 200 1060 http-bio-8080-exec-9 21
+0:0:0:0:0:0:0:1 - - [08/May/2024:21:00:17 +0200] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-9 0
+0:0:0:0:0:0:0:1 - - [08/May/2024:21:00:18 +0200] "POST /provincias/provincias.jsp HTTP/1.1" 200 1476 http-bio-8080-exec-9 186
+0:0:0:0:0:0:0:1 - - [08/May/2024:21:04:55 +0200] "GET /provincias/borrarProvincia.jsp?cod=4 HTTP/1.1" 200 63 http-bio-8080-exec-5 255
