@@ -25,8 +25,8 @@
       Statement consulta = conexion.createStatement();
       ResultSet resultado = consulta.executeQuery("SELECT * FROM provincia WHERE codCCAA = " + codCCAA + " ;");
     %>
-    <table>
-      <thead>
+    <table class="table table-light table-striped">
+      <thead class="table-dark">
         <tr>
           <th>Nombre</th>
           <th></th>
@@ -34,7 +34,7 @@
           <th></th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="table-group-divider">
         <%
           while(resultado.next()){
             out.println("<tr>");
@@ -51,6 +51,14 @@
       //Cerramos conexión con BBDD
       conexion.close();
     %>
+
+    <%-- BOTON AÑADIR PROVINCIA --%>
+    <%-- <a href="insertarProvincia.jsp" method="post">Insertar nueva provincia</a> --%>
+
+    <form action="insertarProvincia.jsp" method="post">
+      <input type="hidden" name="ccaa" value="<%= codCCAA %>" />
+      <button>Insertar nueva provincia</button>
+    </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
