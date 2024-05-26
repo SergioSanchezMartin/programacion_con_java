@@ -27,65 +27,49 @@
      <div class="container">
 
         <h1>Videoteca</h1>
-        <h5>Editar película</h5>   
+        <h5>Añadir película</h5>   
 
         <%
-
-            String sql ;
-
-            //Para recoger tildes y eñes
-            request.setCharacterEncoding("UTF-8");
-            
-            // recuperamos la clave primaria (que nos la pasan desde el index.jsp)
-            String idPel = request.getParameter("id") ;
-
             // conectamos con la base de datos
             Connection conexion = DB.getDB("videoteca") ;
 
-            if (request.getParameterMap().size() == 1) {
-                // lanzamos la consulta
-                sql = "SELECT * FROM pelicula WHERE idPel = " + idPel + ";" ;
-                ResultSet res = conexion.createStatement().executeQuery(sql) ;
-
-                res.next() ;
-        
+            if (request.getParameterMap().isEmpty()) {
+    
         %>
 
-        <form action="editar.jsp" method="post">
-
-            <input type="hidden" name="id" value="<%= idPel %>" />
+        <form action="nuevo.jsp" method="post">
 
             <!-- Título -->
             <div class="row mt-4">
                 <div class="col-sm-6">
                     <label class="form-label fw-bold" for="titulo">Título: </label>
                     <input class="form-control" id="titulo" 
-                           type="text" name="titulo" value="<%= res.getString("titulo") %>" />
+                           type="text" name="titulo" />
                 </div>
             </div>
 
             <!-- -->
-            <div class="row mt-4">
+            <div class="row mt-2">
 
                 <!-- Director -->
                 <div class="col-sm-4">
                     <label class="form-label fw-bold" for="director">Director: </label>
                     <input class="form-control" id="director" 
-                           type="text" name="director" value="<%= res.getString("director") %>" />
+                           type="text" name="director" />
                 </div>
 
                 <!-- Duración -->
                 <div class="col-sm-2">
                     <label class="form-label fw-bold" for="duracion">Duración: </label>
                     <input class="form-control" id="duracion" 
-                           type="text" name="duracion" value="<%= res.getString("duracion") %>" />
+                           type="text" name="duracion" />
                 </div>
 
                 <!-- Año de Estreno -->
                 <div class="col-sm-2">
                     <label class="form-label fw-bold" for="anio">Año de Estreno: </label>
                     <input class="form-control" id="anio" 
-                           type="text" name="anio" value="<%= res.getString("anio").substring(0,4) %>" />
+                           type="text" name="anio"  />
                 </div>
 
 
@@ -93,29 +77,26 @@
                 <div class="col-sm-4">
                     <label class="form-label fw-bold" for="poster">URL imagen: </label>
                     <input class="form-control" id="poster" 
-                           type="text" name="poster" value="<%= res.getString("poster") %>" />
+                           type="text" name="poster"  />
                 </div>
 
             </div>
 
 
             <!-- Argumento -->
-            <div class="row mt-4">
+            <div class="row mt-2">
                 <div class="col">
                      <label class="form-label fw-bold" for="argumento">Argumento: <span class="fw-normal">(300 caracteres máximo)</span> </label>
-                     <textarea class="form-control" id="argumento" name="argumento" rows="8"><%= res.getString("argumento") %></textarea>
+                     <textarea class="form-control" id="argumento" name="argumento" rows="8"></textarea>
                 </div>
             </div>
 
             <!-- Botonera -->
             <div class="row mt-2">
                 <div class="col text-end">
-                    <button class="btn btn-warning">Modificar película</button>
-                    <button type="reset" class="btn btn-info" value="Reset">Limpiar datos</button>
-                    <button type="button" class="btn btn-dark" onclick="location.href='index.jsp';">Cancelar</button>
-                    <%-- <a class="btn btn-dark" href="http://localhost:8080/videoteca">Cancelar</a> --%>
+                    <button class="btn btn-danger">Guardar película</button> 
+                    <a class="btn btn-dark" href="http://localhost:8080/videoteca">Cancelar</a>
                     <!--<button type="button" onclick="javascript: history.back() ;" class="btn btn-dark">Cancelar</button>-->
-                    <%-- <input type="button" value="Haz clic sobre mi" onclick="javascript:window.location='https://www.google.es'"> --%>
                 </div>
             </div>
 
@@ -123,24 +104,20 @@
 
     </div>
     <% 
-    
-            // cerramos la conexión
-            conexion.close() ;
-
          } else {
 
             //Para recoger tildes y eñes
             request.setCharacterEncoding("UTF-8");
-
+            
             // construyo la consulta
-            sql =  "UPDATE pelicula SET " +
-                "titulo='" + request.getParameter("titulo") + "', " +
-                "director='" + request.getParameter("director") + "', " +
-                "argumento='" + request.getParameter("argumento") + "', " +
-                "duracion= " + request.getParameter("duracion") + "," +
-                "anio='" + request.getParameter("anio") + "', " +
-                "poster='" + request.getParameter("poster") + "' " +
-                "WHERE idPel = " + idPel + ";" ; 
+            String sql = "INSERT INTO pelicula(titulo, director, argumento, duracion, anio, poster) VALUES (" +
+                         "'" + request.getParameter("titulo")    + "', " +
+                         "'" + request.getParameter("director")  + "', " +
+                         "'" + request.getParameter("argumento") + "', " +
+                         ""  + request.getParameter("duracion")  + ", "  +
+                         "'" + request.getParameter("anio")      + "', " +
+                         "'" + request.getParameter("poster")    + "'" +
+                         ") ;" ;
 
 
             //out.println(sql) ;
@@ -156,22 +133,6 @@
 
         } 
     %>
-
-
-
-    <script>
-        /*var boton = document.getElementById("cancelar") ;
-            boton.onclick = function(event) { 
-                event.preventDefault() ;
-                history.back() ;                 
-            }
-
-            boton.addEventLister("click", function(event) {
-                event.preventDefault() ;
-                history.back() ; 
-            }) ;*/
-    </script>
-
 
 </body>
 </html>
