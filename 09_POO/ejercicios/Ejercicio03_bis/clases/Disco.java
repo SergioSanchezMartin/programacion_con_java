@@ -31,6 +31,26 @@ public class Disco {
     return this.codigo;
   }
 
+  
+  public void setTitulo(String titulo) {
+    this.titulo = titulo;
+  }
+
+
+  public void setAutor(String autor) {
+    this.autor = autor;
+  }
+
+
+  public void setGenero(String genero) {
+    this.genero = genero;
+  }
+
+
+  public void setDuracion(int duracion) {
+    this.duracion = duracion;
+  }
+
 
   @Override
   public String toString() {

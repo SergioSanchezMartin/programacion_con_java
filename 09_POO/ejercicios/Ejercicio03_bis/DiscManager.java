@@ -45,6 +45,7 @@ public class DiscManager {
             break;
 
           case MODIFICAR_DISCO:
+            modificarDisco();
             break;
           
           case BORRAR_DISCO:
@@ -120,25 +121,49 @@ public class DiscManager {
       duracion = Integer.parseInt(System.console().readLine());        
       
       // creamos y guardamos el disco en la colección
-      coleccion.guardar(new Disco(codigo, titulo, autor, genero, duracion)) ;
+      coleccion.guardar(new Disco(codigo, titulo, autor, genero, duracion));
     }
   }
 
   /** */
   private static void borrarDisco() {
 
-    String codigo ;
+    String codigo;
     if (coleccion.esVacia()) {
-      System.out.println("La coleccióne está vacía. No hay discos que borrar.\n") ;
+      System.out.println("La colección está vacía. No hay discos que borrar.\n");
     } else {
 
-      System.out.println("BORRAR\n======") ;
-      System.out.println("Por favor, introduzca el código del disco que desea borrar: ") ;            
-      codigo = System.console().readLine() ;
+      System.out.println("BORRAR\n======");
+      System.out.println("Por favor, introduzca el código del disco que desea borrar: ");            
+      codigo = System.console().readLine();
       
-      coleccion.borrar(codigo) ;
+      coleccion.borrar(codigo);
     }
 
+  }
+
+  private static void modificarDisco() {
+    String codigo;
+
+    System.out.println("Por favor, introduzca el código del disco que desea modificar: ");
+    codigo = System.console().readLine();
+    Disco d = coleccion.buscar(codigo);
+
+    if (d == null) {
+      System.out.println("Lo sentimos. Ese disco no se encuentra dado de alta.");
+    } else {
+      System.out.println("MODIFICAR\n======");
+      System.out.println("Por favor, introduzca los nuevos datos del disco.");
+      System.out.print("Nuevo Autor: ");
+      d.setAutor(System.console().readLine());
+      System.out.print("Nuevo Título: ");
+      d.setTitulo(System.console().readLine());
+      System.out.print("Nuevo Género: ");
+      d.setGenero(System.console().readLine());
+      System.out.print("Nueva Duración: ");
+      d.setDuracion(Integer.parseInt(System.console().readLine())); 
+
+    }
   }
 
 }
